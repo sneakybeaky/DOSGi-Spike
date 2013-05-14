@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+
+
+    <feature name="dosgi-client" version="${pom.version}" description="Distributed OSGi Spike - Client">
+        <feature version="${pom.version}">dosgi-shared</feature>
+        <bundle>mvn:com.ninedemons.spikes.dosgi/client/${pom.version}</bundle>
+    </feature>
+
+    <feature name="dosgi-service" version="${pom.version}" description="Distributed OSGi Spike - Service">
+        <feature version="${pom.version}">dosgi-shared</feature>
+        <bundle>mvn:com.ninedemons.spikes.dosgi/service/${pom.version}</bundle>
+    </feature>
+
+    <feature name="dosgi-shared" version="${pom.version}" description="Distributed OSGi Spike - Shared code">
+        <bundle>mvn:com.ninedemons.spikes.dosgi/shared/${pom.version}</bundle>
+    </feature>
+
+
+</features>
