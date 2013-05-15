@@ -1,14 +1,15 @@
-1. Build this project
+1. Download and build CXF DOSGi trunk (1.5-SNAPSHOT)
+
+2. Build this project
 
         mvn clean install
 
-2. Download & start up a zookeeper service
 
 3. In the Karaf console do
 
     ```bash
-    karaf@root> features:chooseurl cxf-dosgi 1.4.0
-    karaf@root> features:install cxf-dosgi-discovery-distributed cxf-dosgi-zookeeper-server
+    karaf@root> features:chooseurl cxf-dosgi 1.5-SNAPSHOT
+    karaf@root> features:install cxf-dosgi-discovery-distributed
     karaf@root> features:addUrl mvn:com.ninedemons.spikes.dosgi/features/1.0.0-SNAPSHOT/xml/features
     karaf@root> features:install dosgi-service
     ```
@@ -64,4 +65,4 @@ You will see details of the service :
     karaf@root> stop 116
     ```
 
-8. At this point the service should no longer be available, but it is. You can still see the wsdl and the entry in zookeeper
+8. At this point the service is no longer  available. Repeat the wsdl and zookeeper requests above and you should see they're no longer available
